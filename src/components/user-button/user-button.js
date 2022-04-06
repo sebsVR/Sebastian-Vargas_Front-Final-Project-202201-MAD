@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { UserForm } from '../user-form/user-form.js';
 import * as action from '../../redux/control-users/action-creator';
+import './user-button.scss';
 
 export function UserButtons() {
   const currentUser = useSelector((state) => state.user);
@@ -22,21 +23,30 @@ export function UserButtons() {
   };
 
   return (
-    <div>
-      {!showLogin && (
-        <button className="login-button" onClick={handleLogin}>
-          {currentUser.isLogged ? 'Logout' : 'Login'}
-        </button>
-      )}
-      {!showLogin && !currentUser.isLogged && (
-        <button className="login-button" onClick={handleRegistration}>
-          Registration
-        </button>
-      )}
-      {showLogin && <UserForm setShowForm={setShowLogin} mode="login" />}
-      {showRegistration && (
-        <UserForm setShowForm={setShowRegistration} mode="registration" />
-      )}
-    </div>
+    <>
+      <h1>Welcome</h1>
+      <div className="buttons">
+        {!showLogin && (
+          <button className="login-button" onClick={handleLogin}>
+            {currentUser.isLogged ? 'Logout' : 'Login'}
+          </button>
+        )}
+        {!showLogin && !currentUser.isLogged && (
+          <button className="login-button" onClick={handleRegistration}>
+            Registration
+          </button>
+        )}
+        {showLogin && (
+          <UserForm
+            className="buttons"
+            setShowForm={setShowLogin}
+            mode="login"
+          />
+        )}
+        {showRegistration && (
+          <UserForm setShowForm={setShowRegistration} mode="registration" />
+        )}
+      </div>
+    </>
   );
 }

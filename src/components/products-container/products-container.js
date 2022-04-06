@@ -7,6 +7,7 @@ import { Product } from '../product/product.js';
 
 import { UserButtons } from '../user-button/user-button.js';
 import { Link } from 'react-router-dom';
+import './products-container.scss';
 
 export function ContainerProducts() {
   const user = useSelector((state) => state.user);
@@ -24,7 +25,6 @@ export function ContainerProducts() {
   return (
     <>
       <h1 className="title">Personal Store</h1>
-      <h2 className="title"> Welcome {user.userName}</h2>
       {product.length ? (
         <>
           <div className="container-products">
@@ -32,14 +32,16 @@ export function ContainerProducts() {
               <Product product={product} key={product._id} />
             ))}
           </div>
-          <div>
+          <div className="button">
             <Link to={'/add-product'}>
-              <button type="button">Add product</button>
+              <button className="button-style" type="button">
+                Add product
+              </button>
             </Link>
           </div>
         </>
       ) : (
-        <p>There are no products</p>
+        <p>There are no products!</p>
       )}
       <div className="add-button-container"></div>
     </>

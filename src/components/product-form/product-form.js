@@ -77,7 +77,7 @@ export function ProductForm() {
             className="product__stocks"
             type="text"
             name="stocks"
-            placeholder="stocks"
+            placeholder="Stocks"
             value={product.stocks}
             onChange={handleChange}
           />

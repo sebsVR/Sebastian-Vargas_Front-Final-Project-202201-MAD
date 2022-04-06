@@ -31,7 +31,7 @@ export function LoginForm() {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Usuario
+        User
         <input
           value={user.userName}
           name="userName"

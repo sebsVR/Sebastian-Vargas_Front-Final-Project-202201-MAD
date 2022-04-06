@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import * as api from '../../services/apiUsers';
 import * as action from '../../redux/control-users/action-creator';
-import { Redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export function UserForm({ setShowForm, mode }) {
   const navigate = useNavigate();

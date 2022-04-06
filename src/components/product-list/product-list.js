@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { ProductDetail } from '../product-details/product-detail';
+import { ProductDetails } from '../product-details/product-details';
 export function ProductList({ product }) {
   const dispatch = useDispatch();
   console.log(product);
@@ -13,7 +13,7 @@ export function ProductList({ product }) {
           <Link to="/add-product">
             <button>Add</button>
           </Link>
-          <ProductDetail />
+          <ProductDetails />
         </Link>
       </div>
     </>

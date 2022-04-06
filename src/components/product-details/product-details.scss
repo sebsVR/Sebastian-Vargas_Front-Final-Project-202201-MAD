@@ -1,0 +1,54 @@
+.product {
+  margin-top: 10%;
+  margin-bottom: 2%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.product-form {
+  width: 350px;
+  margin: auto;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+
+  &__label {
+    justify-content: left;
+    text-align: left;
+  }
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  padding: 5%;
+  margin: auto;
+}
+
+input,
+textarea {
+  width: 90%;
+}
+
+textarea {
+  min-height: 100px;
+  max-height: 150px;
+  min-width: 90%;
+  max-width: 90%;
+}
+
+.product-form__update {
+  margin: 10px;
+}
+
+.button {
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 300px) {
+  form {
+    width: 100%;
+  }
+}

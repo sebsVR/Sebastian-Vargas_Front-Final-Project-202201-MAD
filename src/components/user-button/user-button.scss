@@ -1,0 +1,17 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.buttons {
+  display: flex;
+  align-content: center;
+  height: auto;
+  padding: 5%;
+  margin: auto;
+}
+
+.login-button {
+  display: flex;
+  align-content: center;
+}
